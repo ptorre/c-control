@@ -12,3 +12,5 @@ QTWEBENGINE_DISABLE_SANDBOX=1
 QTWEBENGINE_REMOTE_DEBUGGING=0.0.0.0:9222
 ```
 
+export CHROME_WS=$(http http://192.168.1.128:9222/json | jq .[0].webSocketDebuggerUrl| sed -e 's/"//g')
+
